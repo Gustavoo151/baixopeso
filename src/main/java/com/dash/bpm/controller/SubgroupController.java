@@ -62,6 +62,10 @@ public class SubgroupController {
 //    }
 
 
+    @GetMapping("/hello")
+    public ResponseEntity<String> healthCheck() {
+        return ResponseEntity.ok("App is running");
+    }
 
     @GetMapping("/by-nome-cidade/{nomeCidade}")
     public ResponseEntity<List<Subgroup>> getSubgroupsByNomeCidade(@PathVariable String nomeCidade) {

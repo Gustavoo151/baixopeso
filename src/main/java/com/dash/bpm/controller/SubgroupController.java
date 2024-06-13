@@ -79,4 +79,12 @@ public class SubgroupController {
         }
         return ResponseEntity.ok(subgroups);
     }
+
+
+    @PostMapping("/add")
+    public ResponseEntity<Subgroup> addSubgroup(@RequestBody Subgroup subgroup) {
+        Subgroup savedSubgroup = subgroupService.save(subgroup);
+        return ResponseEntity.ok(savedSubgroup);
+    }
+
 }

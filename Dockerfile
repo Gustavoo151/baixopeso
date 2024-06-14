@@ -15,10 +15,10 @@ RUN mvn package -DskipTests
 FROM openjdk:17-jdk-slim
 
 # Copie o jar do estágio de construção
-COPY --from=build /app/target/*.jar app.jar
+COPY --from=build /app/target/*.jar appv1.jar
 
 # Exponha a porta 8080 para o Spring Boot
 EXPOSE 8080
 
 # Defina o comando para iniciar o aplicativo
-ENTRYPOINT ["java","-jar","/app.jar"]
+ENTRYPOINT ["java","-jar","/appv1.jar"]

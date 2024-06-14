@@ -36,4 +36,8 @@ public class SubgroupService {
     public List<Subgroup> getSubgroupsBynomeCidade(String nomeCidade) {
         return subgroupRepository.findBynomeCidade(nomeCidade);
     }
+
+    public Subgroup save(Subgroup subgroup) {
+        return subgroupRepository.save(subgroup);
+    }
 }

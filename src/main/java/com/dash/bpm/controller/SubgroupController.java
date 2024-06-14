@@ -82,6 +82,13 @@ public class SubgroupController {
         } catch (Exception e) {
             return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).body("Erro ao acessar o banco de dados: " + e.getMessage());
         }
+
+    }
+
+    @PostMapping("/add")
+    public ResponseEntity<Subgroup> addSubgroup(@RequestBody Subgroup subgroup) {
+        Subgroup savedSubgroup = subgroupService.save(subgroup);
+        return ResponseEntity.ok(savedSubgroup);
     }
 
 }

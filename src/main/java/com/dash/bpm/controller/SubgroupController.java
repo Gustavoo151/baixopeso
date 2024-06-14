@@ -85,6 +85,7 @@ public class SubgroupController {
 
     }
 
+
     @PostMapping("/add")
     public ResponseEntity<Subgroup> addSubgroup(@RequestBody Subgroup subgroup) {
         Subgroup savedSubgroup = subgroupService.save(subgroup);

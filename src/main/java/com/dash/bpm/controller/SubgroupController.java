@@ -5,6 +5,7 @@ import java.text.Normalizer;
 import com.dash.bpm.entities.Subgroup;
 import com.dash.bpm.service.SubgroupService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 import java.util.List;
@@ -85,6 +86,21 @@ public class SubgroupController {
     public ResponseEntity<Subgroup> addSubgroup(@RequestBody Subgroup subgroup) {
         Subgroup savedSubgroup = subgroupService.save(subgroup);
         return ResponseEntity.ok(savedSubgroup);
+    }
+
+
+    @GetMapping("/test-db")
+    public ResponseEntity<String> testDatabase() {
+        try {
+            List<Subgroup> subgroups = subgroupService.findAll();
+            if (subgroups.isEmpty()) {
+                return ResponseEntity.ok("O banco de dados está funcionando, mas não há registros na tabela Subgroup.");
+            } else {
+                return ResponseEntity.ok("O banco de dados está funcionando e há registros na tabela Subgroup.");
+            }
+        } catch (Exception e) {
+            return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).body("Erro ao acessar o banco de dados: " + e.getMessage());
+        }
     }
 
 }

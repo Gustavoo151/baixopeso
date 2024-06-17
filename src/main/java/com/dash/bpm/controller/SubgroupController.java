@@ -92,4 +92,14 @@ public class SubgroupController {
         return ResponseEntity.ok(savedSubgroup);
     }
 
+
+    @GetMapping("/all")
+    public ResponseEntity<List<Subgroup>> getAllSubgroups() {
+        List<Subgroup> subgroups = subgroupService.findAll();
+        if (subgroups.isEmpty()) {
+            return ResponseEntity.noContent().build();
+        }
+        return ResponseEntity.ok(subgroups);
+    }
+
 }

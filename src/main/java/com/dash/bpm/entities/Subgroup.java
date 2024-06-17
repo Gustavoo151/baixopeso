@@ -155,91 +155,183 @@ public class Subgroup {
         return idbase;
     }
 
+    public void setIdbase(Integer idbase) {
+        this.idbase = idbase;
+    }
+
     public String getBase() {
         return base;
+    }
+
+    public void setBase(String base) {
+        this.base = base;
     }
 
     public String getAlvo() {
         return alvo;
     }
 
+    public void setAlvo(String alvo) {
+        this.alvo = alvo;
+    }
+
     public Integer getA() {
         return a;
+    }
+
+    public void setA(Integer a) {
+        this.a = a;
     }
 
     public Integer getD() {
         return d;
     }
 
+    public void setD(Integer d) {
+        this.d = d;
+    }
+
     public Integer getDp() {
         return dp;
+    }
+
+    public void setDp(Integer dp) {
+        this.dp = dp;
     }
 
     public Integer getDn() {
         return dn;
     }
 
+    public void setDn(Integer dn) {
+        this.dn = dn;
+    }
+
     public Integer getI() {
         return i;
+    }
+
+    public void setI(Integer i) {
+        this.i = i;
     }
 
     public Float getSupp() {
         return supp;
     }
 
+    public void setSupp(Float supp) {
+        this.supp = supp;
+    }
+
     public Float getItemDom() {
         return itemDom;
+    }
+
+    public void setItemDom(Float itemDom) {
+        this.itemDom = itemDom;
     }
 
     public String getDescr() {
         return descr;
     }
 
+    public void setDescr(String descr) {
+        this.descr = descr;
+    }
+
     public Integer getTp() {
         return tp;
+    }
+
+    public void setTp(Integer tp) {
+        this.tp = tp;
     }
 
     public Integer getFp() {
         return fp;
     }
 
+    public void setFp(Integer fp) {
+        this.fp = fp;
+    }
+
     public Float getQuali() {
         return quali;
+    }
+
+    public void setQuali(Float quali) {
+        this.quali = quali;
     }
 
     public Float getLift() {
         return lift;
     }
 
+    public void setLift(Float lift) {
+        this.lift = lift;
+    }
+
     public Float getConf() {
         return conf;
+    }
+
+    public void setConf(Float conf) {
+        this.conf = conf;
     }
 
     public Float getCov() {
         return cov;
     }
 
+    public void setCov(Float cov) {
+        this.cov = cov;
+    }
+
     public Float getChi() {
         return chi;
+    }
+
+    public void setChi(Float chi) {
+        this.chi = chi;
     }
 
     public String getPvalue() {
         return pvalue;
     }
 
+    public void setPvalue(String pvalue) {
+        this.pvalue = pvalue;
+    }
+
     public Float getSup_p() {
         return sup_p;
+    }
+
+    public void setSup_p(Float sup_p) {
+        this.sup_p = sup_p;
     }
 
     public Float getSup_n() {
         return sup_n;
     }
 
+    public void setSup_n(Float sup_n) {
+        this.sup_n = sup_n;
+    }
+
     public Integer getCodCidade() {
         return codCidade;
     }
 
-    public String getNome_cidade() {
+    public void setCodCidade(Integer codCidade) {
+        this.codCidade = codCidade;
+    }
+
+    public String getNomeCidade() {
         return nomeCidade;
+    }
+
+    public void setNomeCidade(String nomeCidade) {
+        this.nomeCidade = nomeCidade;
     }
 }

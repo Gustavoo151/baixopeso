@@ -71,18 +71,18 @@ public class Subgroup {
     @Column(name = "sup_n")
     private Float sup_n;
 
-    @Column(name = "codCidade")
+    @Column(name = "cod_cidade")
     private Integer codCidade;
 
     @Column(name = "nome_cidade", length = 150)
-    private String nome_cidade;
+    private String nomeCidade;
 
     public Subgroup() {}
 
     public Subgroup(Integer idbase, String base, String alvo, Integer a, Integer d, Integer dp, Integer dn, Integer i,
                     Float supp, Float itemDom, String descr, Integer tp, Integer fp, Float quali, Float lift,
                     Float conf, Float cov, Float chi, String pvalue, Float sup_p, Float sup_n,
-                    Integer codCidade, String nome_cidade) {
+                    Integer cod_cidade, String nomeCidade) {
         this.idbase = idbase;
         this.base = base;
         this.alvo = alvo;
@@ -104,8 +104,8 @@ public class Subgroup {
         this.pvalue = pvalue;
         this.sup_p = sup_p;
         this.sup_n = sup_n;
-        this.codCidade = codCidade;
-        this.nome_cidade = nome_cidade;
+        this.codCidade = cod_cidade;
+        this.nomeCidade = nomeCidade;
     }
 
     // Getters and setters omitted for brevity
@@ -147,7 +147,7 @@ public class Subgroup {
                 ", sup_p=" + sup_p +
                 ", sup_n=" + sup_n +
                 ", cod_cidade=" + codCidade +
-                ", nome_cidade='" + nome_cidade + '\'' +
+                ", nome_cidade='" + nomeCidade + '\'' +
                 '}';
     }
 
@@ -240,6 +240,6 @@ public class Subgroup {
     }
 
     public String getNome_cidade() {
-        return nome_cidade;
+        return nomeCidade;
     }
 }

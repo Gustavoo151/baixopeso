@@ -11,7 +11,7 @@ public class WebConfig implements WebMvcConfigurer {
     public void addCorsMappings(CorsRegistry registry) {
         registry.addMapping("/**")
                 .allowedOrigins("https://dashbpn-58jpv23c2-gustavoo151s-projects.vercel.app/") // Substitua pelo URL do seu front-end
-                .allowedMethods("GET", "POST", "PUT", "HEAD", "OPTIONS")
+                .allowedMethods("GET", "POST", "PUT", "DELETE", "HEAD", "OPTIONS")
                 .allowedHeaders("*")
                 .allowCredentials(true);
     }

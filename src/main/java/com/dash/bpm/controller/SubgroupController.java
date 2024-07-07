@@ -11,7 +11,7 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 
 
-@CrossOrigin(origins = "https://dashbpn-58jpv23c2-gustavoo151s-projects.vercel.app/")
+@CrossOrigin(origins = "https://dashbpn.vercel.app/")
 
 @RestController
 @RequestMapping("/api/subgroups")
